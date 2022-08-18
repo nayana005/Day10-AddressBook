@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        AddresBook addressBook = new AddresBook();
+        AddresBook addresBook = new AddresBook();
         System.out.println("Welcome to Address Book Program ");
         Scanner sc = new Scanner(System.in);
         boolean exit = false;
@@ -21,17 +21,17 @@ public class Main {
             switch (num) {
 
                 case 1:
-                    addressBook.addNewContacts();
+                    addresBook.addNewContacts();
                     break;
 
                 case 2:
-                    addressBook.editContact();
+                    addresBook.editContact();
                     break;
                 case 3:
-                    addressBook.showContacts();
+                    addresBook.showContacts();
                     break;
                 case 4:
-                    addressBook.deleteContact();
+                    addresBook.deleteContact();
                     break;
 
                 case 5:
