@@ -32,7 +32,7 @@ public class AddresBook {
         contact.setPhoneNo(sc.nextInt());
 
         // Stored the information in contactsArrayList
-        contactArrayList.add(contacts);
+        contactArrayList.add(contact);
         System.out.println("\nContact added successfully !");
     }
 
@@ -105,6 +105,29 @@ public class AddresBook {
                 }
             }
         }
+    }
+    
+    public void deleteContact() {
+
+        if(contactArrayList.size() > 0) {
+
+            System.out.println("Enter the First name of that person which information you want to delete");
+            String deletePersonInfo = sc.next();
+
+            for(int i = 0; i < contactArrayList.size(); i++) {
+
+                if (contactArrayList.get(i).getFirstName().equals(deletePersonInfo)) {
+                    // stored the value of person information in contact ref. variable
+                    Contact contact = contactArrayList.get(i);
+                    contactArrayList.remove(contact);
+                    System.out.println("Contact deleted successfully");
+                }
+                else
+                    System.out.println("Wrong input !");
+            }
+        }
+        else
+            System.out.println("No more Contact found !");
     }
 
     // Method for display all contact
